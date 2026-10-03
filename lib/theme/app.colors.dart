@@ -1,11 +1,37 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-  static const Color textformBg = Color(0xFFF2F2F2);
-  static const Color redBlood = Color(0xFFFE2C55);
-  static const Color bloodCardBgColor = Color(0xFFF2F2F2);
-
+  static const Color appColor = Color(0xFF2563EB);
+  static const Color secondary = Color(0xFF1D4ED8);
+  static const Color ternary = Color(0xFF0F172A);
+  static const Color fourth = Color(0xFFF59E0B);
   static const Color white = Color(0xFFFFFFFF);
+
+  static const Color success = Color(0xFF16A34A);
+  static const Color error = Color(0xFFDC2626);
+  // AppColors class ke andar add karo
+  static BoxDecoration pageBg(bool dark) {
+    if (dark) return BoxDecoration(color: bg(true));
+    return const BoxDecoration(
+      gradient: LinearGradient(
+        begin: Alignment.topCenter,
+        end: Alignment.bottomCenter,
+        colors: [Color(0xFFDBEAFE), Color(0xFFEFF6FF), Color(0xFFF8FAFC)],
+        stops: [0.0, 0.38, 1.0],
+      ),
+    );
+  }
+
+  static Color bg(bool dark) =>
+      dark ? const Color(0xFF0B1220) : const Color(0xFFF8FAFC);
+  static Color surface(bool dark) =>
+      dark ? const Color(0xFF111827) : Colors.white;
+  static Color text(bool dark) =>
+      dark ? const Color(0xFFF1F5F9) : const Color(0xFF0F172A);
+  static Color subText(bool dark) =>
+      dark ? const Color(0xFF94A3B8) : const Color(0xFF64748B);
+  static Color border(bool dark) =>
+      dark ? const Color(0xFF1F2937) : const Color(0xFFE2E8F0);
   static const Color budgetRange = Color(0xFF9A9898);
   static const Color chatSearchiconcolor = Color(0xFFD9D9D9);
   static const Color budgetRangeText = Color(0xFF918F8F);
@@ -33,7 +59,7 @@ class AppColors {
   static const Color chatAppBarColor = Color(0xFFFB7416);
   static const Color emergencyBloodCard = Color(0xFFFB2F39);
   static const Color bloodNotificartionLight = Color(0xFFFFE2E2);
-  static const Color appColor = Color(0xFF1E4FB0);
+
   static const Color postajobCategory = Color(0xFFF3F3F3);
   static const Color chatisNowColor = Color(0xFFFFCC00);
   static const Color chatisNowCardColor = Color(0xFF29223F);

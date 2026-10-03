@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:myerp/theme/app.colors.dart';
 
-/// 🔹 Simple reusable text widget (responsive)
 class AppText extends StatelessWidget {
   final String title;
   final double fontSize;
@@ -14,7 +13,7 @@ class AppText extends StatelessWidget {
   final TextDecoration? textDecoration;
   final FontStyle? fontStyle;
   final int? maxLine;
-  final double? height; // line-height in px (from Figma)
+  final double? height;
   final double? textScaling;
 
   const AppText({
@@ -40,7 +39,7 @@ class AppText extends StatelessWidget {
       textAlign: textAlign ?? TextAlign.start,
       textScaleFactor: textScaling,
       maxLines: maxLine,
-      overflow: textOverflow, // <-- overflow should be here
+      overflow: textOverflow,
       style: TextStyle(
         fontFamily: 'Plus Jakarta Sans',
         fontSize: fontSize.sp,
@@ -86,7 +85,7 @@ class ReqAppText extends StatelessWidget {
   final FontStyle? fontStyle3;
   final FontStyle? fontStyle4;
 
-  final String? fontFamily; // ✅ Custom font-family support
+  final String? fontFamily;
 
   final Color? color1;
   final Color? color2;
